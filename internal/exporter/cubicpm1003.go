@@ -14,7 +14,7 @@ import (
 
 func RegisterCubicPM1003(cmd *cobra.Command) {
 	cmd.Flags().Bool("cubicpm1003-enabled", false, "Enable the Cubic PM1003 particulate matter sensor for measuring air quality")
-	cmd.Flags().String("cubicpm1003-device-path", "/dev/serial0", "Path or name of block device through which to communicate with the sensor's UART interface")
+	cmd.Flags().String("cubicpm1003-device-path", "/dev/ttyAMA0", "Path or name of block device through which to communicate with the sensor's UART interface")
 }
 
 func TryStartCubicPM1003(group *cmd.ProcessGroup) error {

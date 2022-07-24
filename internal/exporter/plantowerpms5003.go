@@ -14,7 +14,7 @@ import (
 
 func RegisterPlantowerPMS5003(cmd *cobra.Command) {
 	cmd.Flags().Bool("plantowerpms5003-enabled", false, "Enable the Plantower PMS5003 particulate matter sensor for measuring air quality")
-	cmd.Flags().String("plantowerpms5003-device-path", "/dev/serial0", "Path or name of block device through which to communicate with the sensor's UART interface")
+	cmd.Flags().String("plantowerpms5003-device-path", "/dev/ttyAMA0", "Path or name of block device through which to communicate with the sensor's UART interface")
 }
 
 func TryStartPlantowerPMS5003(group *cmd.ProcessGroup) error {
