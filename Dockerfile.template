@@ -1,0 +1,11 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-golang:stretch AS build
+WORKDIR /build
+COPY . .
+RUN go build -o /artifacts/rpi-sensor-exporter cmd/main.go
+
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian-golang:stretch AS final
+WORKDIR /app
+COPY --from=build /artifacts/rpi-sensor-exporter .
+
+EXPOSE 9000
+CMD modprobe i2c-dev && /app/rpi-sensor-exporter
