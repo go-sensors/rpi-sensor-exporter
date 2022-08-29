@@ -20,7 +20,7 @@ func RegisterAsairAHT10(cmd *cobra.Command) {
 	cmd.Flags().Uint8("asairaht10-i2c-addr", asairaht10.GetDefaultI2CPortConfig().Address, "7-bit I2C address of the sensor")
 }
 
-func TryStartAsairAHT10(group *cmd.ProcessGroup) error {
+func TryStartAsairAHT10(group *cmd.ProcessGroup, humidityHandlers []humidity.Handler) error {
 	if !viper.GetBool("asairaht10-enabled") {
 		log.Info("Skipping Asair AHT10")
 		return nil
@@ -44,7 +44,7 @@ func TryStartAsairAHT10(group *cmd.ProcessGroup) error {
 		Source: "asairaht10",
 	})
 	temperatureConsumer := temperature.NewConsumer(sensor, metricHandler)
-	humidityConsumer := humidity.NewConsumer(sensor, metricHandler)
+	humidityConsumer := humidity.NewConsumer(sensor, append(humidityHandlers, metricHandler)...)
 
 	group.Start(temperatureConsumer.Run)
 	group.Start(humidityConsumer.Run)

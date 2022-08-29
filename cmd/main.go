@@ -5,6 +5,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/go-sensors/core/humidity"
 	"github.com/go-sensors/prometheus"
 	"github.com/go-sensors/rpi-sensor-exporter/internal/exporter"
 	"github.com/go-sensors/rpi-sensor-exporter/internal/log"
@@ -31,8 +32,18 @@ var (
 			group.Start(metricsServer.Run)
 
 			var err error
+			humidityHandlers := []humidity.Handler{}
+			var humidityHandler humidity.Handler
+			err, humidityHandler = exporter.TryStartSensironSGP30(group)
+			if err != nil {
+				return err
+			}
 
-			err = exporter.TryStartAsairAHT10(group)
+			if humidityHandler != nil {
+				humidityHandlers = append(humidityHandlers, humidityHandler)
+			}
+
+			err = exporter.TryStartAsairAHT10(group, humidityHandlers)
 			if err != nil {
 				return err
 			}
@@ -59,6 +70,7 @@ func init() {
 	exporter.RegisterAsairAHT10(rootCmd)
 	exporter.RegisterCubicPM1003(rootCmd)
 	exporter.RegisterPlantowerPMS5003(rootCmd)
+	exporter.RegisterSensironSGP30(rootCmd)
 
 	viper.SetEnvPrefix("EXPORTER")
 	replacer := strings.NewReplacer("-", "_")
