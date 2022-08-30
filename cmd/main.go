@@ -43,6 +43,11 @@ var (
 				humidityHandlers = append(humidityHandlers, humidityHandler)
 			}
 
+			err = exporter.TryStartSensironSCD30(group)
+			if err != nil {
+				return err
+			}
+
 			err = exporter.TryStartAsairAHT10(group, humidityHandlers)
 			if err != nil {
 				return err
@@ -70,6 +75,7 @@ func init() {
 	exporter.RegisterAsairAHT10(rootCmd)
 	exporter.RegisterCubicPM1003(rootCmd)
 	exporter.RegisterPlantowerPMS5003(rootCmd)
+	exporter.RegisterSensironSCD30(rootCmd)
 	exporter.RegisterSensironSGP30(rootCmd)
 
 	viper.SetEnvPrefix("EXPORTER")

@@ -9,6 +9,7 @@ require (
 	github.com/go-sensors/plantowerpms5003 v0.0.0-20220606044700-4b662608228b
 	github.com/go-sensors/prometheus v0.0.0-20220829020342-c12c0254a2fc
 	github.com/go-sensors/rpii2c v0.0.0-20220718051036-fca249e0b870
+	github.com/go-sensors/sensironscd30 v0.0.0-20220830185846-6e3eb52c12f8
 	github.com/go-sensors/sensironsgp30 v0.0.0-20220829033333-84c09b9897ca
 	github.com/go-sensors/serial v0.0.0-20220605231656-56250c8cd21d
 	github.com/mattn/go-isatty v0.0.14

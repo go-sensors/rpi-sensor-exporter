@@ -142,6 +142,8 @@ github.com/go-sensors/prometheus v0.0.0-20220829020342-c12c0254a2fc h1:rb8Y4ozqB
 github.com/go-sensors/prometheus v0.0.0-20220829020342-c12c0254a2fc/go.mod h1:Hg0NMBVFuaS1KlomHMXfbuxUxCQJNA6lyrPjWcBOXx8=
 github.com/go-sensors/rpii2c v0.0.0-20220718051036-fca249e0b870 h1:7DjABKmNTKEkfMOR21dDrNT3Lu3KrhydNkJQoIC64B0=
 github.com/go-sensors/rpii2c v0.0.0-20220718051036-fca249e0b870/go.mod h1:wa+QhJG/Y2TDQxLDAfIR8tNlBjZu8waIcaOmKfMbJEw=
+github.com/go-sensors/sensironscd30 v0.0.0-20220830185846-6e3eb52c12f8 h1:nZqLDbF1fepag52POQhTSfO2hBF0NDm0rXdTyouLFOo=
+github.com/go-sensors/sensironscd30 v0.0.0-20220830185846-6e3eb52c12f8/go.mod h1:Soz07kwfzoO9yN1NsSvQ/NSJi6JiTPHqavHKw3RUKvg=
 github.com/go-sensors/sensironsgp30 v0.0.0-20220829033333-84c09b9897ca h1:vfecUALX7OkVSZyraw1QUMnIu/QtVpJ7ymSHTf3UaVw=
 github.com/go-sensors/sensironsgp30 v0.0.0-20220829033333-84c09b9897ca/go.mod h1:jlV0Ihu9uk3O22bHTfnwsGdZ6m4WQBeULSNgqw5GZmA=
 github.com/go-sensors/serial v0.0.0-20220605231656-56250c8cd21d h1:uxB/L8Hh/fpYtE950yYHhilus/hNa/BOJyQn2rabmCE=
