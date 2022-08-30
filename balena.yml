@@ -15,6 +15,7 @@ data:
     - EXPORTER_CUBICPM1003_ENABLED: "false"
     - EXPORTER_PLANTOWERPMS5003_ENABLED: "false"
     - EXPORTER_SENSIRONSGP30_ENABLED: "false"
+    - EXPORTER_SENSIRONSCD30_ENABLED: "false"
   applicationConfigVariables:
     - RESIN_HOST_CONFIG_dtoverlay: "pi3-disable-bt"
     - RESIN_HOST_CONFIG_enable_uart: 1
