@@ -47,7 +47,7 @@ We welcome contributions and collaboration on this project. Please read our [con
 
 [![Daniel James logo](https://secure.gravatar.com/avatar/eaeac922b9f3cc9fd18cb9629b9e79f6.png?size=16) Daniel James](https://github.com/thzinc)
 
-[![license](https://img.shields.io/github/license/go-sensors/rpii2c.svg)](https://github.com/go-sensors/rpii2c/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/go-sensors/rpii2c.svg)](https://github.com/go-sensors/rpii2c/graphs/contributors)
+[![license](https://img.shields.io/github/license/go-sensors/rpi-sensor-exporter.svg)](https://github.com/go-sensors/rpi-sensor-exporter/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/go-sensors/rpi-sensor-exporter.svg)](https://github.com/go-sensors/rpi-sensor-exporter/graphs/contributors)
 
 This software is made available by Daniel James under the MIT license.
